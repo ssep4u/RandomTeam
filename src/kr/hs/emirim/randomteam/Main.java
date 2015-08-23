@@ -25,7 +25,7 @@ public class Main {
         answer = scanner.nextLine();
         teamCount = Integer.parseInt(answer);
 
-        ArrayList<Integer> numbers = new ArrayList<Integer>(lastNumber);
+        ArrayList<Integer> numbers = new ArrayList<>(lastNumber);
         for (int i = 1; i <= lastNumber; i++) {
             numbers.add(i);
         }
@@ -36,8 +36,8 @@ public class Main {
         answer = scanner.nextLine();
         if (!answer.equals("")) {
             excludeNumberStrings = answer.split(",");
-            for (int i = 0; i < excludeNumberStrings.length; i++) {
-                numbers.remove(new Integer(excludeNumberStrings[i]));
+            for (String excludeNumberString : excludeNumberStrings) {
+                numbers.remove(new Integer(excludeNumberString));
             }
         }
 
@@ -53,7 +53,7 @@ public class Main {
         int currentMemberCount = 0;
         for (int i = 1; i <= teamCount; i++) {
             System.out.print("team" + i + " :\t");
-            //�������� ���� ��
+            //팀 나누기
             if (rest > 0) {
                 currentMemberCount = (size / teamCount) + 1;
                 rest--;
