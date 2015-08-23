@@ -12,8 +12,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String answer;
-        int lastNumber = 0;
-        int teamCount = 0;
+        int lastNumber;
+        int teamCount;
 
         //input Last Number
         System.out.println("input Last Number");
@@ -32,7 +32,7 @@ public class Main {
 
         //exclude Member
         System.out.println("exclude Member(separator : \",\")");
-        String[] excludeNumberStrings = null;
+        String[] excludeNumberStrings;
         answer = scanner.nextLine();
         if (!answer.equals("")) {
             excludeNumberStrings = answer.split(",");
