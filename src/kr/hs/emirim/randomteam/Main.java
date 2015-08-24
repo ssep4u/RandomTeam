@@ -1,5 +1,5 @@
 /*
-랜덤한 팀 만들기
+랜덤으로 조짜기
  */
 package kr.hs.emirim.randomteam;
 
@@ -31,7 +31,7 @@ public class Main {
         }
 
         //exclude Member
-        System.out.println("exclude Member(separator : \",\")");
+        System.out.println("exclude Member(separator : \",\"");
         String[] excludeNumberStrings;
         answer = scanner.nextLine();
         if (!answer.equals("")) {
@@ -46,14 +46,14 @@ public class Main {
         Collections.shuffle(numbers);
 
         //print Team
-        System.out.println();
+        System.out.println("Wow~");
         int size = numbers.size();
         int startIndex = 0;
         int rest = size % teamCount;
-        int currentMemberCount = 0;
-        for (int i = 1; i <= teamCount; i++) {
+        int currentMemberCount;
+        for (int i = 0; i < teamCount; i++) {
             System.out.print("team" + i + " :\t");
-            //팀 나누기
+            //나머지가 있을 때
             if (rest > 0) {
                 currentMemberCount = (size / teamCount) + 1;
                 rest--;
